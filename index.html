@@ -72,20 +72,21 @@
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <!-- Logo Area -->
             <a href="#" class="flex items-center gap-3 tracking-tight group">
-                <!-- Primary Logo: Image from Google Drive -->
-                <img src="assets/logo.png" alt="EFG Logo" class="h-16 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
-                
-                <!-- Fallback if image not found -->
-                <div id="logo-fallback" class="hidden flex items-center gap-2">
-                    <div class="bg-brand-navy text-white p-2 rounded-lg shadow-md">
-                        <i class="fas fa-chart-pie text-xl"></i>
-                    </div>
-                    <div class="flex flex-col leading-tight">
-                        <span class="text-brand-navy text-xl font-extrabold tracking-tighter">EFG</span>
-                        <span class="text-brand-red text-xs font-bold uppercase tracking-widest">East Financial</span>
-                    </div>
-                </div>
-            </a>
+    <img src="./assets/logo.png" alt="EFG Logo"
+         class="h-16 w-auto object-contain transition-transform group-hover:scale-105"
+         loading="lazy"
+         onerror="this.style.display='none'; document.getElementById('logo-fallback').classList.remove('hidden');">
+    <!-- Fallback if image not found -->
+    <div id="logo-fallback" class="hidden flex items-center gap-2">
+        <div class="bg-brand-navy text-white p-2 rounded-lg shadow-md">
+            <i class="fas fa-chart-pie text-xl"></i>
+        </div>
+        <div class="flex flex-col leading-tight">
+            <span class="text-brand-navy text-xl font-extrabold tracking-tighter">EFG</span>
+            <span class="text-brand-red text-xs font-bold uppercase tracking-widest">East Financial</span>
+        </div>
+    </div>
+</a>
 
             <!-- Desktop Links -->
             <ul class="hidden lg:flex gap-6 xl:gap-8 items-center font-bold text-xs xl:text-sm uppercase tracking-wide text-slate-600">
@@ -429,12 +430,13 @@
             <div>
                 <!-- Bottom Logo Area -->
                 <div class="mb-10 flex items-center gap-3">
-                    <div class="bg-white p-2 rounded-lg">
-                        <img src="assets/logo.png" alt="EFG Logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <i class="fas fa-chart-pie text-2xl text-brand-navy hidden"></i>
-                    </div>
-                    <span class="text-white text-2xl font-bold tracking-tight">EFG <span class="text-brand-red font-light">East Financial</span></span>
-                </div>
+    <div class="bg-white p-2 rounded-lg flex items-center">
+        <img src="./assets/logo.png" alt="EFG Logo" class="h-10 w-auto object-contain" loading="lazy"
+             onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+        <i class="fas fa-chart-pie text-2xl text-brand-navy hidden"></i>
+    </div>
+    <span class="text-white text-2xl font-bold tracking-tight">EFG <span class="text-brand-red font-light">East Financial</span></span>
+</div>
 
                 <h2 class="text-4xl font-bold text-white mb-6">Get In Touch</h2>
                 <div class="w-20 h-1 bg-brand-red mb-8"></div>
